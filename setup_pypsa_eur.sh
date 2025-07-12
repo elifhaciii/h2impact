@@ -4,7 +4,7 @@
 conda update -y conda
 
 # Step 2: Create environment using the PyPSA-Eur lockfile (choose your platform as needed)
-conda env create -f external/pypsa-eur/envs/linux-64.lock.yaml
+conda env create -f external/pypsa-eur/envs/osx-64.lock.yaml
 
 # Step 3: Activate environment
 conda activate pypsa-eur
