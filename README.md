@@ -143,3 +143,81 @@ python src/h2impact/data/download_monthlydata.py \
   --area 56.0 4.0 56.0 4.0
 If the script runs and saves era5_test.nc (even if it’s tiny), your CDS credentials and environment are correct!
 If you see an authentication or connection error, check your .cdsapirc file and your internet connection.
+
+
+Generate a Scenario Config File (No H₂)
+This script helps you quickly generate a configuration YAML for PyPSA-Eur without hydrogen (“no H₂” scenario).
+
+What does "no H₂" mean?
+In this context, “no H₂” (no hydrogen) means the scenario:
+
+Does not include hydrogen production, storage, or use.
+
+No hydrogen electrolyzers or hydrogen storage units are enabled.
+
+No hydrogen pipelines or related infrastructure are modeled.
+
+All energy demand is met without hydrogen as a fuel or carrier.
+
+This allows you to compare energy systems with and without hydrogen to assess the impact of hydrogen on costs, renewables, and emissions.
+
+📝 How to Generate the Config File
+Script location:
+
+bash
+Copy
+Edit
+src/h2impact/generate_config_noH2.py
+Run the script:
+
+bash
+Copy
+Edit
+python src/h2impact/generate_config_noH2.py
+You’ll be prompted for:
+
+Cutout name (e.g. de-2013-05)
+
+Path to NetCDF weather file
+
+Longitude min & max (e.g., 6.6, 18.5)
+
+Latitude min & max (e.g., 36.5, 47.1)
+
+Start date and end date (YYYY-MM-DD)
+
+Country code(s) (e.g. IT or DE,FR)
+
+Example:
+
+pgsql
+Copy
+Edit
+---- PyPSA-Eur Scenario Config Generator ----
+Enter cutout name (e.g., de-2013-05): it-2013-05
+Enter path to cutout NetCDF file: ../../src/h2impact/data/cutouts/it-2013-05.nc
+Longitude min (e.g., 6.6): 6.6
+Longitude max (e.g., 18.5): 18.5
+Latitude min (e.g., 36.5): 36.5
+Latitude max (e.g., 47.1): 47.1
+Start date (YYYY-MM-DD): 2013-05-01
+End date (YYYY-MM-DD): 2013-05-31
+Country code(s) (e.g., IT): IT
+The script will generate a config file in:
+
+bash
+Copy
+Edit
+src/h2impact/configs/
+🚦 How to Run the Scenario
+After creating your config file, run the Snakemake workflow (from the external/pypsa-eur folder):
+
+bash
+Copy
+Edit
+cd external/pypsa-eur
+snakemake -j1 --configfile ../../src/h2impact/configs/config_no_H2_it-2013-05.yaml
+Output files (including .nc result files) will appear in the results or resources folder as configured.
+
+ℹ️ Note:
+This script is only for “no hydrogen” scenarios. For H₂-enabled analyses, use the relevant script or config.
