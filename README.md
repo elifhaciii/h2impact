@@ -221,3 +221,78 @@ Output files (including .nc result files) will appear in the results or resource
 
 ℹ️ Note:
 This script is only for “no hydrogen” scenarios. For H₂-enabled analyses, use the relevant script or config.
+
+⚡ Generate a Scenario Config File (H₂ Enabled)
+This script helps you quickly generate a configuration YAML for PyPSA-Eur with hydrogen enabled (“H₂ scenario”).
+
+What does "H₂ enabled" mean?
+In this context, “H₂ enabled” means the scenario:
+
+Includes hydrogen production via electrolyzers
+
+Allows hydrogen storage and infrastructure (e.g. storage units, pipelines, links)
+
+Hydrogen is available as a fuel and can participate in sector coupling, flexibility, and storage
+
+Use this scenario to study the role and impact of hydrogen on the energy system.
+
+📝 How to Generate the Config File
+Script location:
+
+bash
+Copy
+Edit
+src/h2impact/generate_config_H2.py
+Run the script:
+
+bash
+Copy
+Edit
+python src/h2impact/generate_config_H2.py
+You’ll be prompted for:
+
+Cutout name (e.g. de-2013-05)
+
+Path to NetCDF weather file
+
+Longitude min & max (e.g., 6.6, 18.5)
+
+Latitude min & max (e.g., 36.5, 47.1)
+
+Start date and end date (YYYY-MM-DD)
+
+Country code(s) (e.g. IT or DE,FR)
+
+Example:
+
+pgsql
+Copy
+Edit
+---- PyPSA-Eur H₂ Scenario Config Generator ----
+Enter cutout name (e.g., de-2013-05): it-2013-05
+Enter path to cutout NetCDF file: ../../src/h2impact/data/cutouts/it-2013-05.nc
+Longitude min (e.g., 6.6): 6.6
+Longitude max (e.g., 18.5): 18.5
+Latitude min (e.g., 36.5): 36.5
+Latitude max (e.g., 47.1): 47.1
+Start date (YYYY-MM-DD): 2013-05-01
+End date (YYYY-MM-DD): 2013-05-31
+Country code(s) (e.g., IT): IT
+The script will generate a config file in:
+
+bash
+Copy
+Edit
+src/h2impact/configs/
+🚦 How to Run the Scenario
+After creating your config file, run the Snakemake workflow (from the external/pypsa-eur folder):
+
+bash
+Copy
+Edit
+cd external/pypsa-eur
+snakemake -j1 --configfile ../../src/h2impact/configs/config_H2_it-2013-05.yaml
+Output files (including .nc result files) will appear in the results or resources folder as configured.
+
+ℹ️ Note:
+This script is only for hydrogen-enabled scenarios. For scenarios without hydrogen, use the generate_config_noH2.py script.
