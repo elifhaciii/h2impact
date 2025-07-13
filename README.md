@@ -297,22 +297,57 @@ Output files (including .nc result files) will appear in the results or resource
 ℹ️ Note:
 This script is only for hydrogen-enabled scenarios. For scenarios without hydrogen, use the generate_config_noH2.py script.
 
-## Running the PyPSA-Eur Model (H2-disabled Scenario)
+### Running PyPSA-Eur and Collecting Results
+After you have created your configuration YAML files (using the provided Python scripts), you can run the PyPSA-Eur Snakemake pipeline and automatically save the result .nc files with clear scenario names.
 
-To run the workflow and automatically copy the results, use the provided script:
+1. Running the No-Hydrogen (NoH2) Scenario
+Use the run_pypsaeur_H2disenabled.sh script to execute the workflow and copy the result file.
+Usage:
 
-```bash
-bash run_pypsaeur_H2disenabled.sh <path-to-config-no-H2-yaml>
-Replace <path-to-config-no-H2-yaml> with your actual configuration file, for example:
+bash
+Copy
+Edit
+bash run_pypsaeur_H2disenabled.sh <path-to-config-noH2-yaml>
+Example:
 
 bash
 Copy
 Edit
 bash run_pypsaeur_H2disenabled.sh src/h2impact/configs/config_no_H2_it-2013-05.yaml
-The script will:
+This will:
 
-Run the PyPSA-Eur workflow using your chosen config file.
+Run the PyPSA-Eur workflow with your configuration.
 
-Copy the result .nc file into the results/ folder with an appropriate name (based on country and cutout).
+Copy the resulting .nc file to results/it-2013-05-nohydrogen-result.nc (filename will be customized based on your config).
+
+2. Running the Hydrogen-Enabled (H2) Scenario
+Use the run_pypsaeur_H2enabled.sh script to execute the workflow for a scenario with hydrogen enabled.
+Usage:
+
+bash
+Copy
+Edit
+bash run_pypsaeur_H2enabled.sh <path-to-config-H2-yaml>
+Example:
+
+bash
+Copy
+Edit
+bash run_pypsaeur_H2enabled.sh src/h2impact/configs/config_H2_it-2013-05.yaml
+This will:
+
+Run the PyPSA-Eur workflow with your configuration.
+
+Copy the resulting .nc file to results/it-2013-05-hydrogen-result.nc (filename will be customized based on your config).
+
+Notes
+Both scripts must be run from the project’s root directory.
+
+The results/ folder will be created if it does not exist.
+
+The output filenames will always include the country and time window (from your config), and will have either -nohydrogen-result.nc or -hydrogen-result.nc as a suffix for clarity.
+
+These scripts make it easy to compare the outputs of your no-H2 and H2-enabled scenarios.
+
 
 
