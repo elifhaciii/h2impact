@@ -1,11 +1,10 @@
 #!/bin/bash
-# Usage: bash run_pypsaeur_nohydrogen.sh <config_yaml_path>
-# Example: bash run_pypsaeur_nohydrogen.sh ../../src/h2impact/configs/config_no_H2_fr-2013-03.yaml
+# Bash script to run PyPSA-Eur with an H2-disenabled configuration and copy the result .nc file
 
 set -e
 
 if [ "$#" -ne 1 ]; then
-    echo "Usage: bash $0 <config_yaml_path>"
+    echo "Usage: bash $0 <path-to-config-noH2-yaml>"
     exit 1
 fi
 
