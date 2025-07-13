@@ -118,3 +118,17 @@ done
 python src/h2impact/data/merge_nc_files_friendly.py \
   -i tmp_monthly_nc \
   -o src/h2impact/data/cutouts/it-2013.nc
+
+
+### Quick Test: Download a Single Day
+
+To check that your setup works, try downloading a single day's data (this is fast and small):
+
+```sh
+python src/h2impact/data/download_monthlydata.py \
+  -s 2013-05-01 \
+  -e 2013-05-01 \
+  -o tmp_monthly_nc/era5_test.nc \
+  --area 56.0 4.0 56.0 4.0
+If the script runs and saves era5_test.nc (even if it’s tiny), your CDS credentials and environment are correct!
+If you see an authentication or connection error, check your .cdsapirc file and your internet connection.
