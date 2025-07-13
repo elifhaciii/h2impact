@@ -296,3 +296,23 @@ Output files (including .nc result files) will appear in the results or resource
 
 ℹ️ Note:
 This script is only for hydrogen-enabled scenarios. For scenarios without hydrogen, use the generate_config_noH2.py script.
+
+## Running the PyPSA-Eur Model (H2-disabled Scenario)
+
+To run the workflow and automatically copy the results, use the provided script:
+
+```bash
+bash run_pypsaeur_H2disenabled.sh <path-to-config-no-H2-yaml>
+Replace <path-to-config-no-H2-yaml> with your actual configuration file, for example:
+
+bash
+Copy
+Edit
+bash run_pypsaeur_H2disenabled.sh src/h2impact/configs/config_no_H2_it-2013-05.yaml
+The script will:
+
+Run the PyPSA-Eur workflow using your chosen config file.
+
+Copy the result .nc file into the results/ folder with an appropriate name (based on country and cutout).
+
+
