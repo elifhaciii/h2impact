@@ -1,3 +1,14 @@
+## Getting Started
+
+### 1. Clone the Repository
+
+First, download (clone) the h2impact repository to your computer:
+
+```sh
+git clone https://github.com/YOUR-USERNAME/h2impact.git
+cd h2impact
+
+
 h2impact: Weather Data Download and Merge Guide
 Downloading ERA5 Weather Data
 This project uses ERA5 weather data as input for energy system modelling.
