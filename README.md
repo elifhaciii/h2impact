@@ -349,5 +349,49 @@ The output filenames will always include the country and time window (from your 
 
 These scripts make it easy to compare the outputs of your no-H2 and H2-enabled scenarios.
 
+📊 Postprocessing & Scenario Comparison
+This section explains how to compare results from the H2-enabled and H2-disenabled scenarios, using the compare_scenarios.py script.
+
+1. What Does This Script Do?
+Loads the result .nc (NetCDF) files produced by your two PyPSA-Eur runs (one with hydrogen, one without).
+
+Compares important results (e.g., total system cost, CO₂ emissions, renewable generation, storage, etc.).
+
+Outputs a summary table and (optionally) generates plots.
+
+2. Where to Find or Put the Script
+Place the script at:
+
+bash
+Copy
+Edit
+src/h2impact/postprocess/compare_scenarios.py
+3. How to Use
+Example command (from your project root):
+
+bash
+Copy
+Edit
+python src/h2impact/postprocess/compare_scenarios.py \
+    results/be-2013-05-nohydrogen-result.nc \
+    results/be-2013-05-result-H2.nc
+Replace the filenames above with your own result files as appropriate.
+
+4. Expected Output
+The script prints a summary comparison to the console.
+
+Optionally, it can generate comparison plots (see script options/help).
+
+5. Requirements
+Python 3.8+
+
+Packages: xarray, matplotlib, numpy, pandas, etc.
+
+Run pip install -r requirements.txt if needed.
+
+Note: Make sure to run your PyPSA-Eur scenarios first, and that both result files are present in your results/ directory.
+
+
+
 
 
