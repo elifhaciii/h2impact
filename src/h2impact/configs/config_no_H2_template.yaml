@@ -1,0 +1,55 @@
+tutorial: true
+enable:
+  retrieve: false
+  build_cutout: false
+  drop_leap_day: true
+run:
+  name: test-elec-noH2
+  disable_progressbar: true
+  shared_resources:
+    policy: false
+  shared_cutouts: true
+scenario:
+  clusters:
+    - 5
+  opts:
+    - ''
+countries: []
+snapshots:
+  start: "YYYY-MM-DD"
+  end:   "YYYY-MM-DD"
+planning_horizons:
+  - 2030
+electricity:
+  co2limit_enable: false
+  extendable_carriers:
+    Generator:
+      - solar
+      - onwind
+      - offwind-ac
+      - offwind-dc
+      - OCGT
+      - CCGT
+      - nuclear
+    StorageUnit:
+      - battery
+  renewable_carriers:
+    - solar
+    - onwind
+    - offwind-ac
+    - offwind-dc
+  estimate_renewable_capacities:
+    enable: true
+    from_gem: true
+    year: 2020
+    expansion_limit: false
+    technology_mapping:
+      Offshore: offwind-ac
+      Onshore: onwind
+      PV: solar
+atlite: {}
+shipdensity:
+  raster:
+    activate: false
+...
+
