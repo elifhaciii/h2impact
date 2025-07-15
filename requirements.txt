@@ -26,6 +26,11 @@ atlite
 # Optional: for improved plotting (remove if not used)
 geodatasets
 
+# For geospatial file IO (required by geopandas)
+fiona
+pyproj
+rtree
+
 # (Optional) If you use jupyter notebooks:
 # jupyter
 
