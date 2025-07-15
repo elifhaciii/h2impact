@@ -1,0 +1,31 @@
+# Core packages for data handling and workflow
+cdsapi
+xarray
+pandas
+numpy
+
+# For NetCDF file handling
+netCDF4
+
+# For merging and geospatial operations
+geopandas
+shapely
+
+# For plotting and visualization
+matplotlib
+
+# For running yaml-based config and scripting
+pyyaml
+
+# For PyPSA-related processing
+pypsa
+
+# Optional: for improved plotting (remove if not used)
+geodatasets
+
+# (Optional) If you use jupyter notebooks:
+# jupyter
+
+# For postprocessing comparisons (add as needed)
+scipy
+
