@@ -20,6 +20,9 @@ pyyaml
 # For PyPSA-related processing
 pypsa
 
+# For the PyPSA-Eur workflow (dependencies often installed via environment.yml, but include here for safety)
+atlite
+
 # Optional: for improved plotting (remove if not used)
 geodatasets
 
