@@ -17,8 +17,17 @@ matplotlib
 # For running yaml-based config and scripting
 pyyaml
 
-# For PyPSA-related processing
+# PyPSA-Eur requirements
 pypsa
+atlite
+fiona
+geopandas
+cdsapi
+xarray
+fsspec
+gcsfs
+matplotlib
+pyyaml
 
 # For the PyPSA-Eur workflow (dependencies often installed via environment.yml, but include here for safety)
 atlite
