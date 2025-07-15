@@ -3,7 +3,7 @@ import subprocess
 import os
 
 # Path to your template config file
-TEMPLATE_PATH = "src/h2impact/generate_config_noH2.yaml"
+TEMPLATE_PATH = "src/h2impact/configs/config_no_H2_template.yaml"
 
 def main():
     print("---- PyPSA-Eur Scenario Config Generator ----")
