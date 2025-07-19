@@ -1,0 +1,40 @@
+# Area definitions for PyPSA-Eur countries
+PREDEFINED_AREAS = {
+    "austria":       (49.0, 9.5, 46.0, 17.2),
+    "belgium":       (51.6, 2.5, 49.5, 6.4),
+    "croatia":       (46.6, 13.4, 42.2, 19.4),
+    "czechia":       (51.1, 12.1, 48.5, 18.9),
+    "denmark":       (57.8, 7.9, 54.5, 12.7),
+    "estonia":       (59.9, 21.7, 57.5, 28.2),
+    "finland":       (70.1, 20.5, 59.8, 31.6),
+    "france":        (51.1, -5.0, 41.3, 9.6),
+    "germany":       (55.1, 5.9, 47.3, 15.0),
+    "greece":        (41.8, 19.3, 34.8, 28.2),
+    "hungary":       (48.6, 16.0, 45.7, 22.9),
+    "ireland":       (55.5, -10.7, 51.3, -5.3),
+    "italy":         (47.1, 6.6, 36.5, 18.5),
+    "latvia":        (58.1, 20.9, 55.7, 28.3),
+    "lithuania":     (56.5, 20.9, 53.9, 26.9),
+    "netherlands":   (53.6, 3.3, 50.7, 7.2),
+    "norway":        (71.2, 4.1, 57.8, 31.5),
+    "poland":        (54.8, 13.9, 48.9, 24.2),
+    "portugal":      (42.2, -9.6, 36.8, -6.2),
+    "romania":       (48.3, 20.2, 43.4, 29.7),
+    "slovakia":      (49.6, 16.8, 47.7, 22.6),
+    "slovenia":      (47.2, 13.4, 45.4, 16.6),
+    "spain":         (44.3, -9.3, 35.9, 3.3),
+    "sweden":        (69.1, 10.8, 55.3, 24.2),
+    "switzerland":   (47.8, 5.9, 45.8, 10.6),
+    "united_kingdom":(60.9, -8.7, 49.8, 2.1),
+}
+
+COUNTRY_CODES = {
+    "austria": "AT", "belgium": "BE", "croatia": "HR", "czechia": "CZ",
+    "denmark": "DK", "estonia": "EE", "finland": "FI", "france": "FR",
+    "germany": "DE", "greece": "GR", "hungary": "HU", "ireland": "IE",
+    "italy": "IT", "latvia": "LV", "lithuania": "LT", "netherlands": "NL",
+    "norway": "NO", "poland": "PL", "portugal": "PT", "romania": "RO",
+    "slovakia": "SK", "slovenia": "SI", "spain": "ES", "sweden": "SE",
+    "switzerland": "CH", "united_kingdom": "UK",
+}
+
