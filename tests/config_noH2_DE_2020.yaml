@@ -1,0 +1,59 @@
+countries: ["DE"]    # restrict to Germany only
+
+atlite:
+  cutouts:
+    de-2020-merged-year:
+      path: cutouts/de-2020-merged-year.nc 
+      years: [2020]
+      freq: "h" 
+renewable:
+  onwind:
+    enabled: false
+  solar:
+    cutout: de-2020-merged-year
+  offwind-ac:
+    enabled: false
+  offwind-dc:
+    enabled: false
+  offwind-float:
+    enabled: false
+
+enable:
+  build_cutout: false
+  retrieve_cutout: false
+  retrieve_databundle: false
+  retrieve_cost_data: false
+  retrieve_osm_boundaries: false
+
+enable: 
+  shipping: false
+
+
+sector:
+  electricity: true
+  heat: true
+#  shipping:
+#    enable: false
+  ammonia:
+    enable: false
+  biomass:
+    enable: false
+  gas:
+    enable: false
+  district_heating:
+    enable: false
+  solar_thermal:
+    enable: false
+  hydrogen_storage:
+    enable: false
+  industry:
+    enable: false
+  steel:
+    enable: false
+  transport:
+    enable: false
+  hydrogen: false     # or true if you want to try H2 scenario
+
+run:
+  name: de-2020-merged-year
+
