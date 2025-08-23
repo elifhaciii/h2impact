@@ -11,7 +11,7 @@ cd h2impact
 ### 2. Requirements
 
 Some features of h2impact depend on PyPSA-Eur
-,a full-featured energy system modeling framework. You need to install it separately. You can follow the instructions in PyPSA-Eur website. 
+,a full-featured energy system modeling framework. You need to install it separately. You can follow the instructions in PyPSA-Eur website: https://pypsa-eur.readthedocs.io/en/latest/installation.html 
 
 PyPSA passes the PyPSA-Eur network model to an external solver for performing the optimisation. 
 
