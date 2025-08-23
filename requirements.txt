@@ -25,9 +25,7 @@ geopandas
 cdsapi
 xarray
 fsspec
-gcsfs
-matplotlib
-pyyaml
+gcsfsl
 
 # For the PyPSA-Eur workflow (dependencies often installed via environment.yml, but include here for safety)
 atlite
@@ -43,6 +41,6 @@ rtree
 # (Optional) If you use jupyter notebooks:
 # jupyter
 
-# For postprocessing comparisons (add as needed)
+# For postprocessing comparisons
 scipy
 
