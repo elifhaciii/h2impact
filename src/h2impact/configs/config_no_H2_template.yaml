@@ -3,23 +3,27 @@ enable:
   retrieve: false
   build_cutout: false
   drop_leap_day: true
+
 run:
-  name: test-elec-noH2
+  name: ""
   disable_progressbar: true
-  shared_resources:
-    policy: false
+  shared_resources: ""
   shared_cutouts: true
+
 scenario:
   clusters:
     - 5
   opts:
     - ''
+
 countries: []
 snapshots:
   start: "YYYY-MM-DD"
   end:   "YYYY-MM-DD"
+
 planning_horizons:
   - 2030
+
 electricity:
   co2limit_enable: false
   extendable_carriers:
@@ -33,11 +37,13 @@ electricity:
       - nuclear
     StorageUnit:
       - battery
+
   renewable_carriers:
     - solar
     - onwind
     - offwind-ac
     - offwind-dc
+
   estimate_renewable_capacities:
     enable: true
     from_gem: true
@@ -47,9 +53,10 @@ electricity:
       Offshore: offwind-ac
       Onshore: onwind
       PV: solar
+
 atlite: {}
+
 shipdensity:
   raster:
     activate: false
 ...
-
