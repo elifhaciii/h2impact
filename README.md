@@ -1,15 +1,14 @@
 ## Getting Started
 
 ### 1. Clone the Repository
-First, clone the h2impact repository to your computer:
 
+```bash
 git clone https://github.com/elifhaciii/h2impact.git
 cd h2impact
 
 ### 2. Requirements
 
-
-
+```bash
 pip install -r requirements.txt
 
 python setup_pypsa_env.py
