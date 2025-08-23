@@ -56,6 +56,8 @@ python -m src.h2impact.data.download_era5_cutout --year 2020 --region germany --
 
 ```
 
+The zipped .nc file is saved under cutouts folder.
+
 
 1. Prerequisites
 Python 3.8+ installed
