@@ -1,18 +1,19 @@
 ## Getting Started
 
 ### 1. Clone the Repository
+First, clone the h2impact repository to your computer:
 
-First, download (clone) the h2impact repository to your computer:
-
-```sh
-git clone https://github.com/YOUR-USERNAME/h2impact.git
+git clone https://github.com/elifhaciii/h2impact.git
 cd h2impact
 
+### 2. Requirements
 
-h2impact: Weather Data Download and Merge Guide
-Downloading ERA5 Weather Data
-This project uses ERA5 weather data as input for energy system modelling.
-Follow these steps to download and merge monthly weather data as NetCDF files.
+
+
+pip install -r requirements.txt
+
+python setup_pypsa_env.py
+
 
 1. Prerequisites
 Python 3.8+ installed
