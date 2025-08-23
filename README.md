@@ -6,7 +6,7 @@
 git clone https://github.com/elifhaciii/h2impact.git
 cd h2impact
 
-<code>```</code>
+```
 
 ### 2. Requirements
 
@@ -15,6 +15,7 @@ pip install -r requirements.txt
 
 python setup_pypsa_env.py
 
+``` 
 
 1. Prerequisites
 Python 3.8+ installed
