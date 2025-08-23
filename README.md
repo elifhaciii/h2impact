@@ -66,6 +66,37 @@ bash scripts/process_and_merge_era5_cutouts.sh <country_code> 2020
 
 ```
 
+###  4. Generating configuration files
+
+This step sets up .yaml configuration files based on downloaded ERA5 cutouts and selected countries. There are two main scenarios in this project: H2 related technologies enabled and disabled.
+
+From the root of the project, run:
+
+```ini
+
+python -m src.h2impact.configs.generate_config_noH2
+
+```
+
+Tip: You don't need to enter bounding box coordinates or time range — they are automatically detected using internal mappings and NetCDF metadata.
+
+The generated YAML file is saved under:
+
+```ini
+
+src/h2impact/configs/yaml_files/config_no_H2_<cutout_name>.yaml
+
+```
+
+Test case: 
+
+```ini
+
+src/h2impact/configs/yaml_files/config_no_H2_DE_2020_01_merged.yaml
+
+```
+
+
 1. Prerequisites
 Python 3.8+ installed
 
