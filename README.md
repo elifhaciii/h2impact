@@ -58,6 +58,13 @@ python -m src.h2impact.data.download_era5_cutout --year 2020 --region germany --
 
 The zipped .nc file is saved under cutouts folder.
 
+To unzip the file and merge _accum.nc and _instant.nc files, use the script: 
+
+```ini
+
+bash scripts/process_and_merge_era5_cutouts.sh  2020
+
+```
 
 1. Prerequisites
 Python 3.8+ installed
