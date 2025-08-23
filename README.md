@@ -17,6 +17,20 @@ python setup_pypsa_env.py
 
 ``` 
 
+###  3. Downloading Data
+Sign up to CDS website. Then,to use your API key, create a file called `~/.cdsapirc` in your home directory. Configure the file:
+
+```ini
+url: https://cds.climate.copernicus.eu/api/v2
+key: <UID>:<API-KEY>
+
+```
+
+
+
+
+
+
 1. Prerequisites
 Python 3.8+ installed
 
