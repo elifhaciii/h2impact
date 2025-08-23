@@ -1,9 +1,4 @@
-# SPDX-FileCopyrightText: Contributors to PyPSA-Eur <https://github.com/pypsa/pypsa-eur>
-#
-# SPDX-License-Identifier: CC0-1.0
-
-tutorial: true
-
+tutorial: false
 enable:
   retrieve: false        # don’t download from Zenodo
   retrieve_databundle: true
@@ -11,7 +6,7 @@ enable:
   drop_leap_day: true    # remove Feb 29 if present
 
 run:
-  name: "test-elec-H2"
+  name: "{run_name}"  # ← dynamically set, e.g., de-2020-H2
   disable_progressbar: true
   shared_resources:
     policy: false
@@ -23,11 +18,11 @@ scenario:
   opts:
     - ''
 
-countries: ['BE']
+countries: []
 
 snapshots:
-  start: "2013-05-01"
-  end:   "2013-05-31"
+  start: "YYYY-MM-DD"
+  end:   "YYYY-MM-DD"
 
 electricity:
   co2limit_enable: true
@@ -36,8 +31,8 @@ electricity:
   extendable_carriers:
     Generator:   [solar, solar-hsat, onwind, offwind-ac, offwind-dc, offwind-float, OCGT, CCGT, nuclear]
     StorageUnit: [battery]
-    Store:       [H2]            # ← H₂‐store
-    Link:        [H2 pipeline]   # ← H₂‐pipeline
+    Store:       [H2]            # ← H₂ store
+    Link:        [H2 pipeline]   # ← H₂ pipeline
 
   renewable_carriers: [solar, solar-hsat, onwind, offwind-ac, offwind-dc, offwind-float]
   estimate_renewable_capacities:
@@ -51,18 +46,18 @@ electricity:
       PV:       solar
 
 atlite:
-  default_cutout: be-05-2013-era5
+  default_cutout: placeholder
   cutouts:
-    be-05-2013-era5:
+    placeholder:
       module: era5
-      x: [4.0,  15.0]
-      y: [46.0, 56.0]
-      time: ["2013-05-01", "2013-05-31"]
+      x: [0.0, 0.0]  # placeholder values
+      y: [0.0, 0.0]
+      time: ["YYYY-MM-DD", "YYYY-MM-DD"]
       variables:
-        - u10   # 10 m wind u-component
-        - v10   # 10 m wind v-component
-        - t2m   # 2 m temperature
-        - si    # surface incoming shortwave
+        - u10
+        - v10
+        - t2m
+        - si
 
 renewable:
   offwind-ac:
@@ -88,7 +83,7 @@ solving:
     name: highs
     options: highs-simplex
   check_infeasibility:
-    enable: false      # remove any Gurobi‐only steps
+    enable: false
   check_objective:
     enable: false
 
@@ -101,9 +96,7 @@ shipdensity:
     activate: false
 
 plotting:
-  nice_names: {}       # avoid missing-key errors
+  nice_names: {}
   tech_colors: {}
   power_network_clustered:
     activate: false
-
-
