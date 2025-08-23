@@ -10,10 +10,21 @@ cd h2impact
 
 ### 2. Requirements
 
+Some features of h2impact depend on PyPSA-Eur
+,a full-featured energy system modeling framework. You need to install it separately. You can follow the instructions in PyPSA-Eur website. 
+
+PyPSA passes the PyPSA-Eur network model to an external solver for performing the optimisation. 
+
+Install HIGHS solver: 
+
+```bash
+conda install -c conda-forge highs
+
+```
+For other required packages install:
+
 ```bash
 pip install -r requirements.txt
-
-python setup_pypsa_env.py
 
 ``` 
 
