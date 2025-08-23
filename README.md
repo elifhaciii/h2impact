@@ -62,7 +62,7 @@ To unzip the file and merge _accum.nc and _instant.nc files, use the script:
 
 ```ini
 
-bash scripts/process_and_merge_era5_cutouts.sh  2020
+bash scripts/process_and_merge_era5_cutouts.sh <country_code> 2020
 
 ```
 
