@@ -18,7 +18,10 @@ python setup_pypsa_env.py
 ``` 
 
 ###  3. Downloading Data
-Sign up to CDS website. Then,to use your API key, create a file called `~/.cdsapirc` in your home directory. Configure the file:
+
+This project includes a script to download ERA5 reanalysis cutouts from the Copernicus Climate Data Store (CDS)
+
+First, make sure that you have a CDS account, you can sign up free. Then create a ~/.cdsapirc file and to easily use your API token, you can configure it inside your .cdsapirc file:
 
 ```ini
 url: https://cds.climate.copernicus.eu/api/v2
@@ -26,9 +29,21 @@ key: <UID>:<API-KEY>
 
 ```
 
+Always run from the project root:
 
+```ini
+python -m src.h2impact.data.download_era5_cutout --year <input> --region <country name> --month <month_number>
 
+```
 
+An example:
+
+```ini
+
+# Download January 2020 for Germany
+python -m src.h2impact.data.download_era5_cutout --year 2020 --region germany --month 1
+
+```
 
 
 1. Prerequisites
