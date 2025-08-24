@@ -1,4 +1,4 @@
-# H2Impact
+# H2impact
 
 A reproducible extension of PyPSA-Eur to assess the impact of hydrogen integration into the European electricity system.
 
