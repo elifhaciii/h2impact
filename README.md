@@ -145,6 +145,7 @@ There are 10 different scripts for possible postproccesing of the output file of
 Use command:
 
 ```ini
+python src/h2impact/postprocess/<script_name>.py --input <path_to_result.nc>
 
 ```
 
