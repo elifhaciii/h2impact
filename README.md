@@ -108,6 +108,37 @@ src/h2impact/configs/yaml_files/config_H2_DE_2020_01_merged.yaml
 
 ```
 
+###  5. Execute Snakemake workflow
+
+Navigate into the external/pypsa-eur directory:
+
+
+```ini
+cd external/pypsa-eur
+
+```
+
+Run actual Snakemake workflow using the configuration file:
+
+```ini
+snakemake -j8 --configfile ../../src/h2impact/configs/yaml_files/<CONFIG_FILENAME>.yaml
+
+```
+
+Optionally, you can preview which rules will be running using:
+
+```ini
+snakemake -j8 --configfile ../../src/h2impact/configs/yaml_files/<CONFIG_FILENAME>.yaml --dry-run
+
+```
+Test case:
+```ini
+snakemake -j1 --configfile src/h2impact/configs/yaml_files/config_H2_DE_2020_01_merged.yaml
+```
+
+
+
+
 
 1. Prerequisites
 Python 3.8+ installed
