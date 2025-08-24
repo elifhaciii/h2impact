@@ -1,4 +1,6 @@
-## Getting Started
+# H2Impact
+
+A reproducible extension of PyPSA-Eur to assess the impact of hydrogen integration into the European electricity system.
 
 ### 1. Clone the Repository
 
@@ -108,7 +110,7 @@ src/h2impact/configs/yaml_files/config_H2_DE_2020_01_merged.yaml
 
 ```
 
-###  5. Execute Snakemake workflow
+###  5. Execution of Snakemake workflow
 
 Navigate into the external/pypsa-eur directory:
 
@@ -135,6 +137,24 @@ Test case:
 ```ini
 snakemake -j1 --configfile src/h2impact/configs/yaml_files/config_H2_DE_2020_01_merged.yaml
 ```
+
+###  6. Postprocessing
+
+There are 10 different scripts for possible postproccesing of the output file of Snakemake workflow. All scripts run in the same logic.
+
+Use command:
+
+```ini
+
+```
+
+
+### Known Issues
+
+Due to environment/compatibility challenges, full Snakemake execution may fail. However, YAML templates are auto-generated, and input data is prepared according to PyPSA-Eur structure. Postprocessing scripts operate on expected outputs.
+
+
+
 
 
 
