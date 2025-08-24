@@ -32,9 +32,12 @@ pip install -r requirements.txt
 
 ###  3. Downloading Data
 
-This project includes a script to download ERA5 reanalysis cutouts from the Copernicus Climate Data Store (CDS)
+This project includes a script to download ERA5 reanalysis cutouts from the Copernicus Climate Data Store (CDS).
 
-First, make sure that you have a CDS account, you can sign up free. Then create a ~/.cdsapirc file and to easily use your API token, you can configure it inside your .cdsapirc file:
+First, make sure that you have a CDS account, you can sign up free: https://cds.climate.copernicus.eu/
+
+
+ Then create a ~/.cdsapirc file and to easily use your API token, you can configure it inside your .cdsapirc file:
 
 ```ini
 url: https://cds.climate.copernicus.eu/api/v2
