@@ -1,6 +1,22 @@
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
-data/
-results/
+*.py[cod]
+*.so
+
+# Environments
 .env
+.venv/
+env/
+venv/
+
+# Jupyter and editor metadata
 .ipynb_checkpoints/
+.vscode/
+.DS_Store
+
+# Test artifacts
+htmlcov/
+.cache/
+coverage.xml
+pytest_cache/
+
