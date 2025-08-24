@@ -1,0 +1,20 @@
+[project]
+name = "h2impact"
+version = "0.1.0"
+description = "A reproducible workflow for hydrogen system modeling using PyPSA-Eur"
+authors = [
+  { name = "Elif Hacihasanoglu", email = "elif.hacihasanoglu@rwth-aachen.de" }
+]
+dependencies = [
+  "pypsa",
+  "pandas",
+  "matplotlib",
+  "xarray",
+  "netCDF4",
+  "pyyaml",
+  "snakemake",
+  "argparse"
+]
+requires-python = ">=3.9"
+
+
